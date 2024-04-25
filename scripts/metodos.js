@@ -98,5 +98,5 @@ function mostrarActividades(repo) {
 // Función para eliminar una actividad
 function eliminarActividad(repo, id) {
   repo.deleteActivityById(id);
-  mostrarActividades(repo.getAllActivities());
+  mostrarActividades(repo);
 }

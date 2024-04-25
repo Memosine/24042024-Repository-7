@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@1,600&family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+
+  
+     <!-- Jasmine CSS -->
+     <link rel="stylesheet" type="text/css" href="jasmine/jasmine.css">
+
+    <title>Perfil</title>
+</head>
+<div class="Contenedor">
+      <nav>
+        <ul>
+            <li>Inicio</li>
+            <li>LinkedIg</li>
+            <li>Twitter</li>
+            <li>Resumen</li>
+        </ul>
+    </nav>
+</div>
+<body>
+    <header>
+              
+        <h1 id="autor"> 
+            <a> Paula Andrea Serna Arias</a>
+        </h1><br>
+        <span id="proycto">
+            <a>PROYECTO M1</a>
+        <span>CC999.9999.999</span><br>
+        <span>2 ESTE 5 20</span><br>
+        <span>Colombia</span><br><br>
+        <h3> Entrega Proyecto M01</h3>
+
+       
+              
+        <img class="profile-picture" src="styles/Imagenes/Foto1.jpg" alt="Perfil">         
+        
+    </header>
+
+    <main>
+        <section>
+          <article>
+                <h2>Mi Perfil</h2><br><br>
+                                
+                <p>Soy maestrante de Tributaria y Política Fiscal, profesional en administración de
+                    empresas y estudiante de contaduría pública, se podría indicar que la profundización
+                    legislativa nacional, en especial en el campo tributario, me facilita la investigación
+                    y la interpretación tributaria para proponer soluciones a problemas relacionados con
+                    impuestos y el campo laboral en el sector privado.
+                </p><br><br>
+                
+            </article>
+            
+            <article>
+                <h2>Mis Tecnologías Favoritas</h2><br><br>
+                <img class="contenedor-imagen" src="styles/Imagenes/Foto6.jpg" alt="Mis Tecnologías Favoritas">
+                <button type="submit" onclick="scrollToSection('seccionTarjetas')">Resumen de Actividades</button>
+
+            </article>
+        </section>
+        <section>
+            <article>
+                
+                <form id="miFormulario">
+                    <label for="seccion">Mis Actividades:</label>
+                    <select name="seccion" id="seccionTarjetas" onchange="cargarSegundaLista()">
+                        <option value="escoger">Escoger Categoria</option>
+                        <option value="resumen">Resumen Académico</option>
+                        <option value="experiencia">Experiencia Laboral</option>
+                        <option value="actividades">Actividades Laborales</option>
+                        <option value="tiempoLibre">Actividades Tiempo Libre</option>
+                    </select>
+                
+                    <label for="otraSeccion">Otra Sección:</label>
+                    <select name="otraSeccion" id="otraSeccion"></select>
+                
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo">
+                
+                    <label for="contenido">Contenido:</label>
+                    <textarea id="contenido" name="contenido" cols="30" rows="10"></textarea>
+                
+                    <label for="urlImg">URL de la Imagen:</label>
+                    <input type="url" id="urlImg" name="urlImg">
+                
+                    <button id="botonAgregar" type="submit" onclick=" agregarActividad(event)">Agregar Actividad</button>
+
+                </form>              
+                 
+            </article>
+        </section>
+   
+		</main>
+    
+	<h2 id="actividades">
+       <a>Mis Actividades Favoritas</a> 
+    </h2>
+    
+    <section class="contenedorTarjetas">
+        <article class="organizadorTarjetas" id="containerCards">
+            <div class="tarjeta" id="tarjeta1">
+                <!-- Contenido de la tarjeta -->
+              
+            </div>
+            <!-- Puedes agregar más tarjetas aquí según sea necesario -->
+        </article>
+    </section>
+    <footer>
+        <h5>Celular: 315-2949443</h5><br>
+        <span>E-mail Personal: paulaasesor8@gmail.com</span>
+    </footer>
+    <script src="scripts/controSelec.js" defer></script>   
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/metodos.js" defer></script>  
+
+    <!-- Scripts de Prueba Jasmine -->
+    <script type="text/javascript" src="jasmine/jasmine.js"></script>
+    <script type="text/javascript" src="jasmine/jasmine-html.js"></script>
+    <script type="text/javascript" src="jasmine/boot.js"></script>
+
+    <!-- Archivos de Prueba Jasmine -->
+    <script type="text/javascript" src="tests/controSelecSpec.js"></script>
+    <script type="text/javascript" src="tests/indexSpec.js"></script>
+
+    <!-- Contenedor para los resultados de las pruebas -->
+    <div id="jasmine"></div>
+
+    <!-- Configuración y ejecución de Jasmine -->
+    <script type="text/javascript">
+        (function() {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var htmlReporter = new jasmine.HtmlReporter();
+            jasmineEnv.addReporter(htmlReporter);
+
+            jasmineEnv.specFilter = function(spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            var currentWindowOnload = window.onload;
+            window.onload = function() {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+        })();
+    </script>
+</body>
+
+</html>

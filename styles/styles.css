@@ -1,0 +1,301 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section {
+    width: 48%; /* Ajustado para dejar espacio entre las secciones */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ebf0f3;
+    color: #011a2b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+header {
+    text-align: center;
+    padding: 61px;
+    background-color: #011a2b;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+}
+
+#autor {
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1.8; /* Ajustado según tus preferencias */
+    margin: 0; /* Elimina el margen por defecto */
+    height: 100%; /* Centra verticalmente el texto */
+    align-items: center;
+    position: absolute;
+    display: absolute;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+   
+}
+
+
+.span {
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 30;
+    align-items: center;
+    display: flex;
+    align-items: center; /* Centra horizontalmente */
+    bottom: 200px;
+    top: 40px;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Alinea el texto al centro si es necesario */
+    line-height: 1.7; /* Espaciado entre líneas */
+}
+
+#actividades {
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    text-align: center;
+}
+
+
+/* Estilos para el botón de tipo submit con la clase botonAgregar */
+.botonAgregar[type="submit"] {
+    background-color: cornflowerblue; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para el botón de tipo submit con la clase botonAgregar al pasar el cursor */
+.botonAgregar[type="submit"]:hover {
+    background-color:#031550; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilos para los botones de tipo button dentro de elementos article */
+article button[type="submit"] {
+    background-color: cornflowerblue; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilos para los botones de tipo button dentro de elementos article al pasar el cursor */
+article button[type="submit"]:hover {
+    background-color:#031550; /* Cambia el color de fondo al pasar el cursor */
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.profile-section,
+.tech-section {
+    width: 30%;
+}
+
+h2, p {
+    color: #011a2b;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    bottom: 100px;
+}
+
+.contenedor-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Altura del contenedor */
+    border: 1px solid #ccc; /* Borde para visualización */
+
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px 50px;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 6px 2.5vw;
+    font-weight: 500;
+    font-size: 1.7rem;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    bottom: 700;
+
+}
+
+ul li:hover {
+    background-color: cornflowerblue;
+    color: #fffefd;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #011a2b;
+    color: white;
+}
+
+form {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea:focus {
+    border-color: dodgerblue;
+    outline: none;
+}
+
+.botonAgregar[type="submit"] {
+    font-size: 25px;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 500;
+    color: #b7eeaa;
+    margin-bottom: 10px;
+    background-color: dodgerblue;
+    padding: 10px;
+    width: 30%;
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    border-radius: 25px;
+}
+
+.botonAgregar[type="submit"]:hover {
+    background-color: #0b40ee;
+}
+
+.contenedorTarjetas {
+    background-color: #ccc;
+    margin: 20px auto;
+    color: white;
+    padding: 50px;
+    border-radius: 30px;
+    width: 95%;
+    max-width: 1800px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    width: calc(33.33% - 20px);
+    height: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Agregamos transformación */
+    border: 1px solid #161a30;
+    font-size: 16px; /* Cambiar el tamaño de fuente a 16px */
+    background-color:#ebf0f3; /* Cambiar el color de fondo a gris */
+    color: white; /* Cambiar el color del texto a blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    
+}   
+
+.tarjeta:hover {
+    box-shadow: 0 0 50px 0 rgba(0, 0, 255, 0.3); /* Cambiar el color de la sombra a azul con opacidad */
+}
+
+
+.tarjeta:active {
+    transform: scale(1.05); /* Agrandar la tarjeta en estado activo */
+}
+
+
+.eliminar {
+    background-color: #ff6347;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form label {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: #161a30;
+    margin-bottom: 10px;
+}
+
+.form input,
+.form textarea {
+    margin-bottom: 20px;
+}
+
+
+

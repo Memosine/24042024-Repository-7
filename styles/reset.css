@@ -1,0 +1,83 @@
+/* Reset.css */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding and margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  line-height: 1;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset hyperlink style */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove border on images inside links in IE 10/11 */
+img {
+  border-style: none;
+}
+
+/* Reset form element default styles */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Remove the default button styling in all browsers */
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Add cursor pointer to clickable elements */
+a,
+button {
+  cursor: pointer;
+}
+
+/* Make sure that elements are not selectable */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
